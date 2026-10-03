@@ -1,0 +1,9 @@
+:root {
+    --main-red: #D70D1D;
+    --red-title: #D61129;
+    --red-border: rgba(215, 13, 29, 0.5);
+    --red-glow: 0 0 20px rgba(215, 13, 29, 0.45);
+    --text: #FFFFFF;
+    --text-muted: #9BA3AA;
+    --bg-section: #040507;
+}
