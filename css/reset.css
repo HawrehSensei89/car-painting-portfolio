@@ -12,4 +12,25 @@
 
 body {
     background: var(--bg);
+    font-family: estedad;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: estedad;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: estedad;
+    src: url("../assets/fonts/Estedad-Bold.ttf");
 }

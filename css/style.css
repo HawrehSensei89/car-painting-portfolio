@@ -1,4 +1,5 @@
 :root {
+    --bg: #07080A;
     --main-red: #D70D1D;
     --red-title: #D61129;
     --red-border: rgba(215, 13, 29, 0.5);
@@ -6,4 +7,66 @@
     --text: #FFFFFF;
     --text-muted: #9BA3AA;
     --bg-section: #040507;
+}
+
+/* styling header*/
+
+#header {
+    padding: 1.4rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: var(--bg);
+}
+
+.header__logo-box {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+}
+
+.header__logo {
+    width: 100px;
+}
+
+.header__logo-title {
+    color: var(--text);
+
+}
+
+.header__navbar {
+    display: flex;
+    gap: 2rem;
+}
+
+.header__nav-link {
+    color: var(--text-muted);
+    display: inline-block;
+    position: relative;
+    padding: 3px 0;
+    overflow: hidden;
+
+    &:not(.header__active)::after {
+        content: "";
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        bottom: 0;
+        left: -100%;
+        background: var(--main-red);
+        transition: all 0.4s ease;
+        opacity: 0;
+    }
+
+    &:hover::after {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+.header__active {
+    padding: 2px 0;
+    color: var(--main-red);
+    border-bottom: 2px solid var(--main-red);
 }
