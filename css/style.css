@@ -257,7 +257,7 @@
     align-items: center;
     gap: 0.8rem;
     border-radius: 10px;
-    
+
 }
 
 .contact-me__link {
@@ -298,4 +298,44 @@
 
 .contact-me__contact-card.special {
     justify-content: space-between;
+}
+
+/* footer styling */
+
+#footer {
+    border-top: 2px solid var(--red-title);
+    padding: 1.4rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    background: var(--bg-section);
+    align-items: center;
+}
+
+.footer__logo-box {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+}
+
+.footer__logo {
+    width: 60px;
+    height: 50px;
+}
+
+.footer__logo-title {
+    color: var(--text);
+
+}
+
+.programmer {
+    color: var(--text);
+}
+.programmer a {
+    color: blue;
+    text-decoration: underline;
+}
+
+.footer__copy-right-text {
+    color: var(--text-muted);
 }
