@@ -1,0 +1,14 @@
+:root {
+    --text: #FFFFFF;
+    --red-title: #D61129;
+}
+
+/* title */
+
+.title {
+    display: flex;
+    justify-content: center;
+    direction: rtl;
+    color: var(--text);
+    text-decoration: underline var(--red-title);
+}
