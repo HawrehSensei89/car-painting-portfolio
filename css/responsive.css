@@ -1,0 +1,184 @@
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+/* ---------- تبلت و لپ‌تاپ کوچک ---------- */
+@media (max-width: 1100px) {
+
+    #services {
+        padding-inline: 1.5rem;
+    }
+
+    /* ۳ کارت در هر ردیف */
+    .services__card {
+        width: calc((100% - 2rem) / 3);
+        min-height: 14rem;
+    }
+
+    .contact-me__contact-card {
+        width: 70%;
+    }
+
+    .about-me__sections {
+        gap: 2rem;
+    }
+}
+
+
+/* ---------- موبایل و تبلت کوچک ---------- */
+@media (max-width: 768px) {
+
+    /* ----- Header + منوی همبرگری ----- */
+    #header {
+        padding: 0.8rem 1rem;
+        flex-wrap: nowrap;
+    }
+
+    .header__toggle {
+        display: flex;
+    }
+
+    .header__nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--bg);
+        direction: rtl;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+    }
+
+    .header__nav.open {
+        max-height: 400px;
+        border-bottom: 2px solid var(--red-title);
+    }
+
+    .header__navbar {
+        flex-direction: column;
+        gap: 0;
+        padding: 0.5rem 0;
+    }
+
+    .header__nav-link {
+        display: block;
+        padding: 0.9rem 1.5rem;
+    }
+
+    .header__nav-link:not(.header__active)::after {
+        display: none;
+    }
+
+    .header__active {
+        padding: 0.9rem 1.5rem;
+        border-bottom: none;
+        border-right: 3px solid var(--main-red);
+        background: rgba(215, 13, 29, 0.08);
+    }
+
+    /* ----- Hero ----- */
+    #hero {
+        flex-direction: column-reverse;
+        gap: 1.5rem;
+        padding: 6.5rem 1rem 2.5rem;
+    }
+
+    .hero__left-section,
+    .hero__right-section {
+        width: 100%;
+    }
+
+    .hero__left-section {
+        padding-left: 0;
+        direction: rtl;
+        text-align: right;
+    }
+
+    .hero__img {
+        border-radius: 12px;
+    }
+
+    /* ----- Services ----- */
+    #services {
+        padding-inline: 1rem;
+    }
+
+    .services__card {
+        width: calc((100% - 1rem) / 2);
+        min-height: 12rem;
+    }
+
+    /* ----- About ----- */
+    #about-me {
+        padding: 3rem 1.2rem;
+    }
+
+    .about-me__sections {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .about-me__right-section,
+    .about-me__left-section {
+        flex: none;
+        width: 100%;
+    }
+
+    .about-me__title {
+        font-size: 1.4rem;
+    }
+
+    .about-me__describtion br {
+        display: none;
+    }
+
+    /* ----- Contact ----- */
+    #contact-me {
+        padding-inline: 1rem;
+        gap: 1.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .contact-me__contact-card {
+        width: 100%;
+        padding: 1.2rem 1rem;
+    }
+
+    /* ----- Footer ----- */
+    #footer {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.4rem 1rem;
+        text-align: center;
+    }
+}
+
+
+/* ---------- موبایل‌های کوچک ---------- */
+@media (max-width: 480px) {
+
+    .header__logo {
+        width: 48px;
+        height: 40px;
+    }
+
+    .header__logo-title {
+        font-size: 0.9rem;
+    }
+
+    /* ۱ کارت در هر ردیف */
+    .services__card {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .hero__title {
+        font-size: 1rem;
+    }
+
+    .contact-me__details {
+        font-size: 0.85rem;
+    }
+}
