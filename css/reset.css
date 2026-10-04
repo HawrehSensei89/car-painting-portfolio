@@ -13,6 +13,7 @@
 body {
     background: var(--bg);
     font-family: estedad;
+    overflow-x: hidden;
 }
 
 button,
