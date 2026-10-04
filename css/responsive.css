@@ -1,184 +1,217 @@
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
+/* Responsive layout */
 
-/* ---------- تبلت و لپ‌تاپ کوچک ---------- */
 @media (max-width: 1100px) {
-
-    #services {
-        padding-inline: 1.5rem;
-    }
-
-    /* ۳ کارت در هر ردیف */
-    .services__card {
-        width: calc((100% - 2rem) / 3);
-        min-height: 14rem;
-    }
-
-    .contact-me__contact-card {
-        width: 70%;
-    }
-
-    .about-me__sections {
-        gap: 2rem;
-    }
+  #services { padding-inline: 1.5rem; }
+  .services__card {
+    width: calc((100% - 2rem) / 3);
+    min-height: 14rem;
+    height: auto;
+  }
+  .contact-me__contact-card { width: 70%; }
+  .about-me__sections { gap: 3rem; }
+  .about-me__right-section img { width: 100%; }
 }
 
-
-/* ---------- موبایل و تبلت کوچک ---------- */
 @media (max-width: 768px) {
+  #header {
+    padding: .75rem 1rem;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
 
-    /* ----- Header + منوی همبرگری ----- */
-    #header {
-        padding: 0.8rem 1rem;
-        flex-wrap: nowrap;
-    }
+  .header__logo {
+    width: 48px;
+    height: 42px;
+    object-fit: contain;
+  }
 
-    .header__toggle {
-        display: flex;
-    }
+  .header__logo-title {
+    font-size: .85rem;
+    line-height: 1.35;
+  }
 
-    .header__nav {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: var(--bg);
-        direction: rtl;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.4s ease;
-    }
+  .header__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: auto;
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--red-border);
+    border-radius: 10px;
+    background: transparent;
+    color: var(--text);
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
 
-    .header__nav.open {
-        max-height: 400px;
-        border-bottom: 2px solid var(--red-title);
-    }
+  .header__nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    direction: rtl;
+    max-height: 0;
+    overflow: hidden;
+    border-bottom: 0 solid transparent;
+    transition: max-height .35s ease, border-color .35s ease;
+  }
 
-    .header__navbar {
-        flex-direction: column;
-        gap: 0;
-        padding: 0.5rem 0;
-    }
+  .header__nav.open {
+    max-height: 400px;
+    border-bottom: 2px solid var(--red-title);
+  }
 
-    .header__nav-link {
-        display: block;
-        padding: 0.9rem 1.5rem;
-    }
+  .header__navbar {
+    flex-direction: column;
+    gap: 0;
+    padding: .5rem 0;
+  }
 
-    .header__nav-link:not(.header__active)::after {
-        display: none;
-    }
+  .header__nav-link {
+    display: block;
+    padding: .9rem 1.5rem;
+  }
 
-    .header__active {
-        padding: 0.9rem 1.5rem;
-        border-bottom: none;
-        border-right: 3px solid var(--main-red);
-        background: rgba(215, 13, 29, 0.08);
-    }
+  .header__nav-link:not(.header__active)::after { display: none; }
 
-    /* ----- Hero ----- */
-    #hero {
-        flex-direction: column-reverse;
-        gap: 1.5rem;
-        padding: 6.5rem 1rem 2.5rem;
-    }
+  .header__active {
+    padding: .9rem 1.5rem;
+    border-bottom: none;
+    border-right: 3px solid var(--main-red);
+    background: rgba(215,13,29,.08);
+  }
 
-    .hero__left-section,
-    .hero__right-section {
-        width: 100%;
-    }
+  #hero {
+    flex-direction: column-reverse;
+    gap: 1.5rem;
+    padding: 6.5rem 1rem 3rem;
+  }
 
-    .hero__left-section {
-        padding-left: 0;
-        direction: rtl;
-        text-align: right;
-    }
+  .hero__left-section,
+  .hero__right-section { width: 100%; }
 
-    .hero__img {
-        border-radius: 12px;
-    }
+  .hero__left-section {
+    padding: 0;
+    direction: rtl;
+    text-align: right;
+  }
 
-    /* ----- Services ----- */
-    #services {
-        padding-inline: 1rem;
-    }
+  .hero__img {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+  }
 
-    .services__card {
-        width: calc((100% - 1rem) / 2);
-        min-height: 12rem;
-    }
+  .hero__slogan {
+    font-size: clamp(2rem, 9vw, 3rem);
+    line-height: 1.5;
+  }
 
-    /* ----- About ----- */
-    #about-me {
-        padding: 3rem 1.2rem;
-    }
+  .hero__describtion { line-height: 1.9; }
 
-    .about-me__sections {
-        flex-direction: column;
-        gap: 1.5rem;
-        margin-top: 2rem;
-    }
+  .services__cards-container { gap: 1rem; }
 
-    .about-me__right-section,
-    .about-me__left-section {
-        flex: none;
-        width: 100%;
-    }
+  .services__card {
+    width: calc((100% - 1rem) / 2);
+    min-height: 12rem;
+    height: auto;
+    padding-bottom: 1rem;
+  }
 
-    .about-me__title {
-        font-size: 1.4rem;
-    }
+  .services__card-title {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
 
-    .about-me__describtion br {
-        display: none;
-    }
+  .services__card-describtion {
+    line-height: 1.8;
+    font-size: .9rem;
+  }
 
-    /* ----- Contact ----- */
-    #contact-me {
-        padding-inline: 1rem;
-        gap: 1.2rem;
-        margin-bottom: 2rem;
-    }
+  #about-me { padding: 3rem 1rem; }
 
-    .contact-me__contact-card {
-        width: 100%;
-        padding: 1.2rem 1rem;
-    }
+  .about-me__sections {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
 
-    /* ----- Footer ----- */
-    #footer {
-        flex-direction: column;
-        gap: 1rem;
-        padding: 1.4rem 1rem;
-        text-align: center;
-    }
+  .about-me__right-section,
+  .about-me__left-section {
+    flex: none;
+    width: 100%;
+  }
+
+  .about-me__right-section img {
+    width: 100%;
+    height: auto;
+  }
+
+  .about-me__title { font-size: 1.4rem; }
+  .about-me__describtion { line-height: 2; }
+  .about-me__describtion br { display: none; }
+
+  #contact-me {
+    padding-inline: 1rem;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-me__contact-card {
+    width: 100%;
+    padding: 1.2rem 1rem;
+  }
+
+  .contact-me__details { line-height: 1.8; }
+
+  #footer {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.4rem 1rem;
+    text-align: center;
+  }
+
+  .footer__logo {
+    width: 48px;
+    height: 42px;
+  }
 }
 
-
-/* ---------- موبایل‌های کوچک ---------- */
 @media (max-width: 480px) {
+  #header { padding-inline: .75rem; }
 
-    .header__logo {
-        width: 48px;
-        height: 40px;
-    }
+  .header__logo-title { font-size: .78rem; }
 
-    .header__logo-title {
-        font-size: 0.9rem;
-    }
+  .header__toggle {
+    width: 40px;
+    height: 40px;
+  }
 
-    /* ۱ کارت در هر ردیف */
-    .services__card {
-        width: 100%;
-        min-height: auto;
-    }
+  #hero { padding-inline: .8rem; }
 
-    .hero__title {
-        font-size: 1rem;
-    }
+  .hero__title { font-size: 1rem; }
+  .hero__slogan { font-size: 2.15rem; }
 
-    .contact-me__details {
-        font-size: 0.85rem;
-    }
+  .services__card {
+    width: 100%;
+    min-height: auto;
+    padding: .25rem 0 1rem;
+  }
+
+  .services__icon { font-size: 38px; }
+
+  #about-me { padding-inline: .8rem; }
+
+  .contact-me__contact-card { padding: 1rem .8rem; }
+
+  .contact-me__details {
+    font-size: .82rem;
+    word-break: break-word;
+  }
+}
+
+@media (min-width: 769px) {
+  .header__toggle { display: none; }
 }
