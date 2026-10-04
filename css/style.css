@@ -159,8 +159,8 @@
     border: 2px solid var(--red-border);
     width: 20%;
     height: 30dvh;
-    transition: box-shadow 0.5s ease ,
-    transform 0.5s ease;
+    transition: box-shadow 0.5s ease,
+        transform 0.5s ease;
     border-radius: 10px;
 
     &:hover {
@@ -178,10 +178,60 @@
 
 .services__card-title {
     color: var(--text);
-    margin:0 0.7rem 0.5rem 0;
+    margin: 0 0.7rem 0.5rem 0;
 }
 
 .services__card-describtion {
     color: var(--text-muted);
-    margin:0 0.7rem 0 0;
+    margin: 0 0.7rem 0 0;
+}
+
+
+/* About me styles */
+
+#about-me {
+    direction: rtl;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding: 4rem 2rem;
+}
+
+.about-me__sections {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 22rem;
+    margin-top: 3rem;
+}
+
+.about-me__right-section {
+    flex: 0 1 38%;
+}
+
+.about-me__right-section img {
+    display: block;
+    width: 180%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.about-me__left-section {
+    flex: 0 1 52%;
+}
+
+.about-me__special {
+    color: var(--red-title);
+    margin-bottom: 0.5rem;
+}
+
+.about-me__title {
+    color: var(--text);
+    margin-bottom: 1rem;
+    font-size: 1.7rem;
+}
+
+.about-me__describtion {
+    color: var(--text-muted);
+    line-height: 2;
+    font-size: 1rem;
 }

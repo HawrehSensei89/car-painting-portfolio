@@ -11,4 +11,5 @@
     direction: rtl;
     color: var(--text);
     text-decoration: underline var(--red-title);
+    margin-top: 1rem;
 }
