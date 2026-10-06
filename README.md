@@ -80,7 +80,6 @@ Instagram: [@hawreh.kh](https://www.instagram.com/hawreh.kh/)
 
 Made by **HawrehSensei**
 
-- GitHub: [@HawrehSensei89](https://github.com/HawrehSensei89)
 - Instagram: [@hawreh.kh](https://www.instagram.com/hawreh.kh/)
 
 ## 📄 License
